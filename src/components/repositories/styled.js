@@ -16,7 +16,7 @@ export const WrapperTab = styled(Tab)`
   &.is-selected {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: 0.5px solid #ffffff
+    background-color: rgba(0, 0, 0, 0.03);
   }
 `;
 WrapperTab.tabsRole = "Tab";
