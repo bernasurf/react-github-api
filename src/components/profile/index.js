@@ -14,29 +14,25 @@ const Profile = () => {
           <h1>{githubState.user.name}</h1>
           <S.WrapperUserItem>
             <h3>Username: </h3>
-            <a href="https://www.github.com/bernasurf" target="_blank" rel="noreferrer">username</a>
+            <a href={githubState.user.html_url} target="_blank" rel="noreferrer">{ githubState.user.login }</a>
           </S.WrapperUserItem>
         </div>
         <S.WrapperUserNumbers>
           <div>
             <h4>Followers</h4>  
-            <span>#6</span>
-          </div>
-          <div>
-            <h4>Starred</h4>
-            <span>#3</span>
+            <span>{ githubState.user.followers }</span>
           </div>
           <div>
             <h4>Following</h4>
-            <span>#10</span>
+            <span>{ githubState.user.following }</span>
           </div>
           <div>
             <h4>Gists</h4>
-            <span>#7</span>
+            <span>{ githubState.user.public_gists }</span>
           </div>
           <div>
             <h4>Repos</h4>
-            <span>#20</span>
+            <span>{ githubState.user.public_repos }</span>
           </div>
         </S.WrapperUserNumbers>
       </S.WrapperInfoUser>
