@@ -39,6 +39,7 @@ const GithubProvider = ({ children }) => {
     api.get(`users/${username}`).then(({ data }) => {
       setGithubState((prevState) => ({
         ...prevState,
+        hasUser: true,
         user: {
           login: data.login,
           name: data.name,

@@ -9,7 +9,17 @@ function Layout({ children }) {
   return (
     <S.Container>
       <Header />
-      { githubState.loading ? <p>Loading...</p> : <> { children } </> }
+      { githubState.hasUser ? (
+        <>
+          { githubState.loading ? (
+            <p>Loading...</p> 
+          ) : ( 
+            <> 
+            { children } 
+            </> 
+          )}
+        </>
+      ) : <div><h2> Welcome to our Interface to Github API</h2><h3>Please use the Search Above to get info from a github user</h3> </div> }
     </S.Container>
   )
 }
