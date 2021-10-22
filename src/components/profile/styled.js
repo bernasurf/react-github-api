@@ -33,9 +33,13 @@ export const WrapperInfoUser = styled.div`
 export const WrapperUserItem = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 2px;
-  a {
+  margin-top: 3px;
+  margin-left: 4px;
+  a, span {
     margin-left: 8px;
+  }
+  a {
+    color: blue;
   }
 `;
 export const WrapperUserNumbers = styled.div`

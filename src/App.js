@@ -12,9 +12,7 @@ function App() {
       <GithubProvider>
         <ResetCSS />
         <Layout>
-          <Profile>
-            
-          </Profile>
+          <Profile />
           <Repositories />
         </Layout>
       </GithubProvider>
