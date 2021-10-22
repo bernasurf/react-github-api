@@ -4,30 +4,38 @@ import * as S from './styled';
 const Profile = () => {
   return (
     <S.Wrapper>    
-      <img src="https://avatars.githubusercontent.com/u/67717387?v=4" alt="User Avatar" />
+      <S.WrapperImage src="https://avatars.githubusercontent.com/u/67717387?v=4" alt="User Avatar" />
+      <S.WrapperInfoUser>
         <div>  
           <h1>Nome Usuario</h1>
-          <S.WrapperUserName>
+          <S.WrapperUserItem>
             <h3>Username: </h3>
-            <span>username</span>
-          </S.WrapperUserName>
+            <a href="https://www.github.com/bernasurf" target="_blank" rel="noreferrer">username</a>
+          </S.WrapperUserItem>
         </div>
         <S.WrapperUserNumbers>
           <div>
             <h4>Followers</h4>  
-            <span>#followers</span>
+            <span>#6</span>
           </div>
           <div>
             <h4>Starred</h4>
-            <span>#starred</span>
+            <span>#3</span>
           </div>
           <div>
             <h4>Following</h4>
-            <span>#following</span>
-          </div>  
+            <span>#10</span>
+          </div>
+          <div>
+            <h4>Gists</h4>
+            <span>#7</span>
+          </div>
+          <div>
+            <h4>Repos</h4>
+            <span>#20</span>
+          </div>
         </S.WrapperUserNumbers>
-        <div>Repositories</div>
-        <div>Starreds</div>
+      </S.WrapperInfoUser>
     </S.Wrapper>
   )
 }

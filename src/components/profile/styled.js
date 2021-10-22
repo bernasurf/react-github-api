@@ -3,17 +3,46 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
+  font-family: roboto, sans-serif;
 `;
 
-export const WrapperUserName = styled.div`
+export const WrapperImage = styled.img`
+  border-radius: 50%;
+  height: 180px;
+  margin: 24px 4px;
+`;
+
+export const WrapperInfoUser = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 2px;
+  height: 200px;
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+`;
+
+export const WrapperUserItem = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 2px;
+  a {
+    margin-left: 8px;
+  }
 `;
 export const WrapperUserNumbers = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   div {
-    margin-left: 8px;
+    margin: 0px 8px;
+    text-align: center;
   }
 `;
