@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import * as S from './styled';
 
-const RepositoryItem = ({ name, linkToRepo, fullRepoName }) => {
+const RepositoryItem = ({ name, linkToRepo, fullRepoName, repoDescription }) => {
   return (
-    <div>
+    <S.Wrapper>
       <h2> { name } </h2>
-      <h4>Full Repo Name:</h4>
-      <a href={linkToRepo} target="_blank" rel="noreferrer">{ fullRepoName }</a>
-    </div>
+      <span>Link: <a href={linkToRepo} target="_blank" rel="noreferrer">{ fullRepoName }</a></span>
+      <p>{repoDescription}</p>
+    </S.Wrapper>
   )
 }
 
