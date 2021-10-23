@@ -3,7 +3,7 @@ import { Tabs, Tab, TabPanel, TabList } from 'react-tabs';
 
 export const WrapperTab = styled(Tab)`
   border-radius: 16px;
-  border: 1px solid #ccc;
+  
   margin-left: 10px;
   padding: 8px;
   cursor: pointer;
@@ -57,7 +57,7 @@ WrapperTabPanel.tabsRole= "TabPanel";
 
 export const WrapperList = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin: 6px;
 `;
