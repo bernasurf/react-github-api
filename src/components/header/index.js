@@ -14,10 +14,16 @@ const Header = () => {
     return getUser(usernameForSearch)
   }
 
+  const handleKeyPress = (target) => {
+    if(target.charCode===13){
+      submitGetUser();    
+    } 
+  }
+
   return (
       <header>
         <S.WrapperHeader>
-          <input type="text" placeholder="Type Github user and hit search button" onChange={(e) => setUsernameForSearch(e.target.value)}></input>
+          <input type="text" placeholder="Type Github user and hit search button" onKeyPress={handleKeyPress} onChange={(e) => setUsernameForSearch(e.target.value)}></input>
           <button type="submit" onClick={submitGetUser}>Search</button>
         </S.WrapperHeader>
       

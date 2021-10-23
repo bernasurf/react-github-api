@@ -5,13 +5,14 @@ import * as S from './styled';
 
 const Repositories = () => {
 
-  const { githubState, getUserRepos } = useGithub();
+  const { githubState, getUserRepos, getUserStarred } = useGithub();
   const [ LoadedUserForRepos, setLoadedUserForRepos] = useState(false);
   
 
   useEffect(() => {
     if (!!githubState.user.login) {
       getUserRepos(githubState.user.login);
+      getUserStarred(githubState.user.login);
     }
     setLoadedUserForRepos(githubState.repositories);
   }, [githubState.user.login]);
@@ -39,7 +40,19 @@ const Repositories = () => {
                   ))}
           </S.WrapperList>
         </S.WrapperTabPanel>
-        <S.WrapperTabPanel><RepositoryItem name="repo 2" linkToRepo="https://wwww.github.com/linkRepo2" fullRepoName="FullNameRepo2"/></S.WrapperTabPanel>
+        <S.WrapperTabPanel>
+          <S.WrapperList>
+            {githubState.starred.map((item) => (
+                    <RepositoryItem
+                      key={item.id}
+                      name={item.name}
+                      linkToRepo={item.html_url}
+                      fullRepoName={item.full_name}
+                      repoDescription={item.description}
+                    />
+                  ))}
+          </S.WrapperList>
+        </S.WrapperTabPanel>
       </S.WrapperTabs>
     </>
   )
