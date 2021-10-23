@@ -55,11 +55,13 @@ const GithubProvider = ({ children }) => {
         },
       }))
     }).finally(() => {
-      setGithubState((prevState) => ({
+      setTimeout(() => { 
+        setGithubState((prevState) => ({
         ...prevState,
         loading: !prevState.loading,
-      }))
-    })
+        }))
+      }, 2000);
+    });
   };
 
   const getUserRepos = (username) => {

@@ -2,6 +2,7 @@ import React from 'react'
 import useGithub from '../../hooks/github-hooks';
 import Header from '../header';
 import NoUser from '../NoUser';
+import Loading from '../loading';
 import * as S from './styled';
 
 function Layout({ children }) {
@@ -13,7 +14,7 @@ function Layout({ children }) {
       { githubState.hasUser ? (
         <>
           { githubState.loading ? (
-            <p>Loading...</p> 
+            <Loading/>
           ) : ( 
             <> 
             { children } 
